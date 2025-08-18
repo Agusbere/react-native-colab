@@ -11,6 +11,7 @@ const Counter = ({ initial = 0 }) => {
         <Button title="+" onPress={() => setCount(c => c + 1)} />
         <Button title="-" onPress={() => setCount(c => c - 1)} />
         <Button title="Reset" onPress={() => setCount(initial)} />
+        <Button title="x2" onPress={() => setCount(c => c * 2)} />
       </View>
     </View>
   );
@@ -18,8 +19,17 @@ const Counter = ({ initial = 0 }) => {
 
 const styles = StyleSheet.create({
   container: { alignItems: 'center', marginVertical: 12 },
-  value: { fontSize: 32, fontWeight: '700', marginBottom: 8 },
-  row: { flexDirection: 'row', width: 220, justifyContent: 'space-between' },
+  value: {
+    fontSize: 36,
+    fontWeight: 'bold',
+    marginBottom: 12,
+    color: '#1E40AF'
+  },
+  row: {
+    flexDirection: 'row',
+    width: 300,
+    justifyContent: 'space-between'
+  },
 });
 
 export default Counter;
